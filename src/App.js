@@ -10,7 +10,7 @@ const DummyNames = [
   },
 ];
 
-function App(props) {
+function App() {
   const addUserHandler = (event) => {
     event.preventDefault();
   };
