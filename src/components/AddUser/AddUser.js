@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import { Container } from "./Style";
 
 function AddUser(props) {
   const addUserHandler = (event) => {
@@ -7,20 +8,15 @@ function AddUser(props) {
   };
   return (
     <>
-      <form onSubmit={addUserHandler}>
-        <label htmlFor="username">Username</label>
-        <input type="text" id="username"></input>
-        <label htmlFor="age">Age (years)</label>
-        <input type="text" id="age"></input>
-      </form>
-      <Button />
-      {props.expenses.map((user, index) => (
-        <div key={index}>
-          <p>
-            {user.name}, ({user.age} years old)
-          </p>
-        </div>
-      ))}
+      <Container>
+        <form className="formInput" onSubmit={addUserHandler}>
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username"></input>
+          <label htmlFor="age">Age (years)</label>
+          <input type="text" id="age"></input>
+        </form>
+        <Button />
+      </Container>
     </>
   );
 }
