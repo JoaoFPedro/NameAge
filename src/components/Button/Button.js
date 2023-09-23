@@ -1,10 +1,13 @@
 import React from "react";
+import { Container } from "../Button/Style";
 
-function Button() {
+function Button(props) {
   return (
-    <>
-      <button type="submit"> Add User</button>
-    </>
+    <Container>
+      <button type={props.type || "button"} onClick={props.onClick}>
+        {props.children}
+      </button>
+    </Container>
   );
 }
 export default Button;
