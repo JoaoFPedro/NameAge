@@ -1,6 +1,7 @@
 import React from "react";
 import AddUser from "./components/AddUser/AddUser";
 import Expenses from "./components/Expenses/Expenses";
+import UserList from "./components/UserList/UserList";
 
 const DummyNames = [
   {
@@ -14,6 +15,7 @@ function App(props) {
     <>
       <AddUser />;
       <Expenses expenses={DummyNames} />
+      <UserList users={["teste"]} />
     </>
   );
 }
